@@ -4,6 +4,8 @@ Web app for the smart parking platform with a 3D lot view (OJT project). The bac
 
 Development happens on the `develop` branch. `main` only receives tested sprint releases.
 
+The whole system (how to run the backend, architecture, database, ports) is described in `docs/huong-dan-setup-microservices.md` of the backend repository.
+
 ## Tech stack
 
 | Part | Technology |
