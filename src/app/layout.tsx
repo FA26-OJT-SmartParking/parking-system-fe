@@ -1,15 +1,25 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Navbar } from '@/components/layout/Navbar';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Parking System",
-  description: "Smart parking finder with a 3D lot view",
+  title: 'Smart Parking System',
+  description: 'Nền tảng tìm kiếm và quản lý bãi đỗ xe thông minh với mô hình 3D và AI',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="vi" className="h-full antialiased">
-      <body className="flex min-h-full flex-col">{children}</body>
+    <html lang="vi">
+      <body className="min-h-screen bg-gray-50 text-gray-900 antialiased">
+        <Navbar />
+        <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
